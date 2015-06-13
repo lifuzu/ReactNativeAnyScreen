@@ -29,12 +29,10 @@ var ListGridScreen = React.createClass({
   },
   render: function() {
     return (
-      <ScrollView>
-        <ListView contentContainerStyle={styles.list}
-          dataSource={this.state.dataSource}
-          renderRow={(rowData) => <Text style={styles.item}>{rowData}</Text>}
-        />
-      </ScrollView>
+      <ListView contentContainerStyle={styles.list}
+        dataSource={this.state.dataSource}
+        renderRow={(rowData) => <View style={styles.block}><Text style={styles.item}>{rowData}</Text></View>}
+      />
     );
   }
 });
@@ -44,13 +42,17 @@ var styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap'
   },
-  item: {
+  block: {
     borderWidth: 1,
-    backgroundColor: 'red',
-    margin: 3,
-    // padding: 5,
-    height: 50,
-    width: width / 3 - 3 * 2
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 200,
+    margin: 4,
+    // width: width / 2 - 4 * 2-2,
+    width: width - 4 * 2,
+  },
+  item: {
+    backgroundColor: 'blue',
   }
 });
 
