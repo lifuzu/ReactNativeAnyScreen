@@ -12,20 +12,20 @@ class Routes {
   static FullScreen() {
     var fullScreen = require('./components/FullScreen');
     return {
-      key: 'full',
+      key: 'Full',
       component: fullScreen,
       title: fullScreen.title
     }
   }
-  static SearchScreen() {
-    var searchScreen = require('./components/SearchScreen');
+  static ListGridScreen() {
+    var listGridScreen = require('./components/ListGridScreen');
     return {
-      key: 'search',
-      component: searchScreen,
-      title: searchScreen.title
+      key: 'ListGrid',
+      component: listGridScreen,
+      title: listGridScreen.title
     }
   }
-        // component: searchScreen,
+      // component: searchScreen,
       // title: searchScreen.title
       //rightButtonTitle: 'Done',
       //onRightButtonPress: () => {

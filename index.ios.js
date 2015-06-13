@@ -24,20 +24,19 @@ var ListGridScreen = require('./components/ListGridScreen');
 
 var AnyScreen = React.createClass({
   render: function() {
-    var screenElement;
-    screenElement = (<ScreenNavigator title='Full' component={FullScreen} key='Full' />);
-    screenElement = (<ScreenNavigator title='RightNavBtn'
+    var RightNavBtnElement = (<ScreenNavigator title='RightNavBtn'
                                       component={FullScreen}
                                       key='RightNavBtn'
                                       rightButtonTitle='Right'
                                       onRightButtonPress={
                                         ()=>{AlertIOS.alert("hello")}
                                       } />);
-    screenElement = (<FullScreen/>);
-    screenElement = (<ScreenNavigator title='ListGrid' component={ListGridScreen} key='ListGrid' />);
+    var FullScreenElement = (<FullScreen/>);
+    var FullWithNavElement = (<ScreenNavigator title='Full' component={FullScreen} key='Full' />);
+    var ListGridElement = (<ScreenNavigator title='ListGrid' component={ListGridScreen} key='ListGrid' />);
     return (
       <View style={styles.app}>
-        {screenElement}
+        {ListGridElement}
       </View>
     );
 
