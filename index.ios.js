@@ -21,6 +21,9 @@ var {width, height} = Dimensions.get('window');
 var ScreenNavigator = require('./ScreenNavigator');
 var FullScreen = require('./components/FullScreen');
 var ListGridScreen = require('./components/ListGridScreen');
+var AnimationScreen = require('./components/AnimationScreen');
+var DragCardScreen = require('./components/DragCardScreen');
+var Game2048Screen = require('./components/Game2048');
 
 var AnyScreen = React.createClass({
   render: function() {
@@ -34,9 +37,12 @@ var AnyScreen = React.createClass({
     var FullScreenElement = (<FullScreen/>);
     var FullWithNavElement = (<ScreenNavigator title='Full' component={FullScreen} key='Full' />);
     var ListGridElement = (<ScreenNavigator title='ListGrid' component={ListGridScreen} key='ListGrid' />);
+    var AnimationElement = (<ScreenNavigator title='Animation' component={AnimationScreen} key='Animation' />);
+    var DragCardElement = (<ScreenNavigator title='DragCard' component={DragCardScreen} key='DragCard' />);
+    var Game2048Element = (<ScreenNavigator title='Game2048' component={Game2048Screen} key='Game2048' />);
     return (
       <View style={styles.app}>
-        {ListGridElement}
+        {Game2048Element}
       </View>
     );
 
