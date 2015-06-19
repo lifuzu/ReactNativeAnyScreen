@@ -82,22 +82,22 @@ var DragCardScreen = React.createClass({
 
     return (
       <View style={styles.container}>
-          <View
-            onResponderMove={this.setPosition}
-            onResponderRelease={this.resetPosition}
-            onStartShouldSetResponder={this._onStartShouldSetResponder}
-            onMoveShouldSetResponder={this._onMoveShouldSetResponder}
-            style={[styles.card, this.getCardStyle()]}
-          >
-            <Image source={{uri: 'http://i.imgur.com/91AR0Lo.jpg'}} style={styles.cardImage} />
-            <View style={styles.cardTextContainer}>
-              <Text style={styles.textLeft}>Rabbit, 10</Text>
-              <Text style={styles.textRight}>1 Connection</Text>
-            </View>
+        <View
+          onResponderMove={this.setPosition}
+          onResponderRelease={this.resetPosition}
+          onStartShouldSetResponder={this._onStartShouldSetResponder}
+          onMoveShouldSetResponder={this._onMoveShouldSetResponder}
+          style={[styles.card, this.getCardStyle()]}>
+
+          <Image source={{uri: 'http://i.imgur.com/91AR0Lo.jpg'}} style={styles.cardImage} />
+          <View style={styles.cardTextContainer}>
+            <Text style={styles.textLeft}>Rabbit, 10</Text>
+            <Text style={styles.textRight}>1 Connection</Text>
           </View>
-          <View style={styles.dragText}>
-            <Text>{this.state.lastDragDirectio}</Text>
-          </View>
+        </View>
+        <View style={styles.dragText}>
+          <Text>{this.state.lastDragDirectio}</Text>
+        </View>
       </View>
     );
   }

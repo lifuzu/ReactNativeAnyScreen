@@ -19,7 +19,7 @@ var AnimationScreen = React.createClass({
   },
   // //this.refs['this'], 400, 0, 'linear', {opacity: 1}
   componentDidMount () {
-    Animation.startAnimation(this.refs['this'], 400, 0, 'linear', {opacity: 1});
+    Animation.startAnimation(this.refs['this'], 400, 0.1, 'linear', {opacity: 1});
     //   node: this.refs['this'],
     //   duration: 400,
     //   easing: 'easeInQuad',

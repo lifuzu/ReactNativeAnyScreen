@@ -24,25 +24,33 @@ var ListGridScreen = require('./components/ListGridScreen');
 var AnimationScreen = require('./components/AnimationScreen');
 var DragCardScreen = require('./components/DragCardScreen');
 var Game2048Screen = require('./components/Game2048');
+var GeoInfoScreen = require('./components/GeoScreen');
+var SocketIOScreen = require('./components/SocketIO');
 
 var AnyScreen = React.createClass({
   render: function() {
     var RightNavBtnElement = (<ScreenNavigator title='RightNavBtn'
-                                      component={FullScreen}
-                                      key='RightNavBtn'
-                                      rightButtonTitle='Right'
-                                      onRightButtonPress={
-                                        ()=>{AlertIOS.alert("hello")}
-                                      } />);
+                                component={FullScreen}
+                                key='RightNavBtn'
+                                rightButtonTitle='Right'
+                                onRightButtonPress={
+                                  ()=>{AlertIOS.alert("hello")}
+                                } />);
     var FullScreenElement = (<FullScreen/>);
-    var FullWithNavElement = (<ScreenNavigator title='Full' component={FullScreen} key='Full' />);
-    var ListGridElement = (<ScreenNavigator title='ListGrid' component={ListGridScreen} key='ListGrid' />);
+    var FullWithNavElement = (<ScreenNavigator title='Full'
+                                component={FullScreen}
+                                key='Full' />);
+    var ListGridElement = (<ScreenNavigator title='ListGrid'
+                             component={ListGridScreen}
+                             key='ListGrid' />);
     var AnimationElement = (<ScreenNavigator title='Animation' component={AnimationScreen} key='Animation' />);
     var DragCardElement = (<ScreenNavigator title='DragCard' component={DragCardScreen} key='DragCard' />);
     var Game2048Element = (<ScreenNavigator title='Game2048' component={Game2048Screen} key='Game2048' />);
+    var GeoInfoElement = (<ScreenNavigator title='GeoInfo' component={GeoInfoScreen} key='GeoInfo' />);
+    var SocketIOElement = (<ScreenNavigator title='SocketIO' component={SocketIOScreen} key='SocketIO' />);
     return (
       <View style={styles.app}>
-        {Game2048Element}
+        {SocketIOElement}
       </View>
     );
 
