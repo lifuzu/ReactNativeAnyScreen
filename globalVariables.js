@@ -5,4 +5,6 @@ module.exports = {
   orange: '#ff6204',
   background: '#f5f5f5',
   textColor: '#666',
+
+  dropboxAppKey: 'rjl3x3hsyimbqr0',
 }

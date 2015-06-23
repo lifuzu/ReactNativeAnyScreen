@@ -61,7 +61,7 @@ var styles = StyleSheet.create({
     height: 200,
     margin: 4,
     // width: width / 2 - 4 * 2,
-    width: width - 4 * 2,
+    width: width / 2 - 4 * 2,
   },
   item: {
     backgroundColor: 'blue',
