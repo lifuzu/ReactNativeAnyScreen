@@ -23,6 +23,7 @@ var FullScreen = require('./components/FullScreen');
 var ListGridScreen = require('./components/ListGridScreen');
 var GridLayoutScreen = require('./components/GridLayoutScreen');
 var AnimationScreen = require('./components/AnimationScreen');
+var LayoutAnimationScreen = require('./components/LayoutAnimation');
 var DragCardScreen = require('./components/DragCardScreen');
 var Game2048Screen = require('./components/Game2048');
 var GeoInfoScreen = require('./components/GeoScreen');
@@ -50,15 +51,17 @@ var AnyScreen = React.createClass({
                              component={GridLayoutScreen}
                              key='GridLayout' />);
     var AnimationElement = (<ScreenNavigator title='Animation' component={AnimationScreen} key='Animation' />);
+    var LayoutAnimationElement = (<ScreenNavigator title='LayoutAnimation' component={LayoutAnimationScreen} key='LayoutAnimation' />);
     var DragCardElement = (<ScreenNavigator title='DragCard' component={DragCardScreen} key='DragCard' />);
     var Game2048Element = (<ScreenNavigator title='Game2048' component={Game2048Screen} key='Game2048' />);
     var GeoInfoElement = (<ScreenNavigator title='GeoInfo' component={GeoInfoScreen} key='GeoInfo' />);
     var SocketIOElement = (<ScreenNavigator title='SocketIO' component={SocketIOScreen} key='SocketIO' />);
     var DropboxOauthElement = (<ScreenNavigator title='DropboxOauth' component={DropboxOauthScreen} key='DropboxOauth' />);
     var CountDownElement = (<ScreenNavigator title='CountDown' component={CountDownScreen} key='CountDown' />);
+
     return (
       <View style={styles.app}>
-        {CountDownElement}
+        {LayoutAnimationElement}
       </View>
     );
 
